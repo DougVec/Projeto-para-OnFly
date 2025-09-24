@@ -54,7 +54,7 @@ O arquivo `docker-compose.yml` na raiz do projeto foi configurado para subir uma
 
 O Docker Compose também está configurado para montar a pasta `n8n-nodes-random` no diretório de conectores customizados da instância do n8n.
 
-Para iniciar o ambiente, execute o seguinte comando na raiz do projeto (`c:\PROJETOONFLY`):
+Para iniciar o ambiente, execute o seguinte comando na raiz do projeto :
 
 ```bash
 docker-compose up -d
