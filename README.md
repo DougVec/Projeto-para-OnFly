@@ -73,18 +73,4 @@ O n8n estará disponível em [http://localhost:5678](http://localhost:5678) apó
 
 ---
 
-## Estrutura do Projeto
-
-```
-.
-├── n8n-nodes-random/   # Pacote do conector customizado
-│   ├── nodes/
-│   │   └── Random/
-│   │       ├── Random.node.ts    # Lógica e definição do nó
-│   │       └── random.svg        # Ícone do nó
-│   ├── package.json      # Dependências e scripts do conector
-│   └── ...
-├── docker-compose.yml  # Arquivo para orquestrar os contêineres n8n e Postgres
-└── README.md           # Este arquivo
-```
-
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/005ef249-bc6b-4ef7-9942-52475bef9c7f" />
