@@ -1,0 +1,45 @@
+version: '3.8'
+
+networks:
+  n8n-network:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:14
+    restart: always
+    environment:
+      - POSTGRES_USER=n8n
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=n8n
+    ports:
+      - '5433:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - n8n-network
+
+  n8n:
+    image: n8nio/n8n:latest
+    restart: always
+    environment:
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_USER=n8n
+      - DB_POSTGRESDB_PASSWORD=mysecretpassword
+      - GENERIC_TIMEZONE=America/Sao_Paulo
+    ports:
+      - '5679:5678'
+    depends_on:
+      - postgres
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./n8n-nodes-random:/home/node/.n8n/custom
+    networks:
+      - n8n-network
+
+volumes:
+  postgres_data:
+  n8n_data:

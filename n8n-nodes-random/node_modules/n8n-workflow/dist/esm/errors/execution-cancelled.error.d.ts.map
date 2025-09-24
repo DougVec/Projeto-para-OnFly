@@ -1,0 +1,1 @@
+{"version":3,"file":"execution-cancelled.error.d.ts","sourceRoot":"","sources":["../../../src/errors/execution-cancelled.error.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,iCAAiC,CAAC;AAErE,qBAAa,uBAAwB,SAAQ,kBAAkB;gBAClD,WAAW,EAAE,MAAM;CAM/B"}
